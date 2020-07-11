@@ -44,11 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
+    <Compile Include="CafeGirl1.cs" />
     <Compile Include="Creature.cs" />
     <Compile Include="IMachine.cs" />
     <Compile Include="IMoving.cs" />
     <Compile Include="IManipulated.cs" />
     <Compile Include="Instruction.cs" />
+    <Compile Include="PolishPan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
