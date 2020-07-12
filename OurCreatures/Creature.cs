@@ -35,7 +35,7 @@ namespace OurCreatures
         }
         public void Move()
         {
-            Console.WriteLine(String.Format("This {0} is moving by {1} with speed of {2} and driven by {3}", typeof(Creature), 
+            Console.WriteLine(String.Format("This {0} is moving by {1} with speed of {2} and driven by {3}", this.Name, 
                 MovingType, Speed, GetDriver() == null ? "nobody" : GetDriver().ToString()));
         }
     }
