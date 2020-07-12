@@ -10,7 +10,16 @@ namespace OurCreatures
     {
         static void Main(string[] args)
         {
-           
+            Instruction[] instructions = new Instruction[new Random().Next(2, 5)];
+            for (int i = 0; i < instructions.Length; i++)
+            {
+                instructions[i] = new Instruction() { Description = String.Format("instruction №{0}", i+1) };
+            }
+
+            Auto auto = new Auto();
+            auto.SetDriver(new Human() { Name = "Ray" });
+            auto.GetInstructions(instructions.ToList<Instruction>());
+            auto.Move();
         }
     }
 }

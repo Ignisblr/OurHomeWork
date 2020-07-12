@@ -20,7 +20,7 @@ namespace OurCreatures
 
         public bool Manipulated { get { return manipulated_; } }
 
-        string Name { get; set; }
+        public string Name { get; set; }
 
         public double Speed
         {

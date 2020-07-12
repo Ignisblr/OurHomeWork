@@ -18,7 +18,7 @@ namespace OurCreatures
         {
             foreach (Instruction instruction in instructions)
             {
-                Console.WriteLine($"starting to execute next {instruction}");
+                Console.WriteLine($"starting to execute next {instruction.Description}");
             }
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OurCreatures
 {
-    class Animal : Creature
+    public class Animal : Creature
     {
         public int Age { get; set; }
         public bool Sick { get; set; }

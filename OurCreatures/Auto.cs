@@ -8,11 +8,17 @@ namespace OurCreatures
 {
     public class Auto : Machine, IManipulated<Human>
     {
+        enum Type { Sport, Truck, Bus }
 
-        private Creature driver_ = null;
+        //private Creature driver_ = null;
         public void SetDriver(Creature driver)
         {
-            driver_ = driver as Human;
+            if (driver == null)
+            {
+                throw(new NullReferenceException("Set some driver for this vehicle"));
+            }
+            
+            //driver_ = driver as Human;
         }
     }
 }
