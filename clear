@@ -1,0 +1,155 @@
+[1mdiff --git a/.vs/OurCreatures/v15/.suo b/.vs/OurCreatures/v15/.suo[m
+[1mindex 10dbc13..49a11f8 100644[m
+Binary files a/.vs/OurCreatures/v15/.suo and b/.vs/OurCreatures/v15/.suo differ
+[1mdiff --git a/.vs/OurCreatures/v15/Server/sqlite3/storage.ide b/.vs/OurCreatures/v15/Server/sqlite3/storage.ide[m
+[1mindex 6970882..f172d5f 100644[m
+Binary files a/.vs/OurCreatures/v15/Server/sqlite3/storage.ide and b/.vs/OurCreatures/v15/Server/sqlite3/storage.ide differ
+[1mdiff --git a/.vs/OurCreatures/v15/Server/sqlite3/storage.ide-shm b/.vs/OurCreatures/v15/Server/sqlite3/storage.ide-shm[m
+[1mindex ca63664..5157e85 100644[m
+Binary files a/.vs/OurCreatures/v15/Server/sqlite3/storage.ide-shm and b/.vs/OurCreatures/v15/Server/sqlite3/storage.ide-shm differ
+[1mdiff --git a/.vs/OurCreatures/v15/Server/sqlite3/storage.ide-wal b/.vs/OurCreatures/v15/Server/sqlite3/storage.ide-wal[m
+[1mindex cb4f2c1..0356c83 100644[m
+Binary files a/.vs/OurCreatures/v15/Server/sqlite3/storage.ide-wal and b/.vs/OurCreatures/v15/Server/sqlite3/storage.ide-wal differ
+[1mdiff --git a/OurCreatures/CafeGirl1.cs b/OurCreatures/CafeGirl1.cs[m
+[1mdeleted file mode 100644[m
+[1mindex fee538b..0000000[m
+[1m--- a/OurCreatures/CafeGirl1.cs[m
+[1m+++ /dev/null[m
+[36m@@ -1,51 +0,0 @@[m
+[31m-﻿using System;[m
+[31m-using System.Collections.Generic;[m
+[31m-using System.Linq;[m
+[31m-using System.Text;[m
+[31m-using System.Threading.Tasks;[m
+[31m-[m
+[31m-namespace OurCreatures[m
+[31m-{[m
+[31m-    /// <summary>[m
+[31m-    /// Typical polish girl from poor family[m
+[31m-    /// who needs to work in cafe to survive[m
+[31m-    /// </summary>[m
+[31m-    class CafeGirl : Creature, IManipulated<PolishPan>[m
+[31m-    {[m
+[31m-        private PolishPan pan;[m
+[31m-        public int IQ { get; set; }[m
+[31m-[m
+[31m-        public CafeGirl(string name)[m
+[31m-        {[m
+[31m-            Name = name;[m
+[31m-            [m
+[31m-            Random rand = new Random();[m
+[31m-            IQ = rand.Next(80, 150);[m
+[31m-            if (IQ > 120)[m
+[31m-                Resign();[m
+[31m-        }[m
+[31m-[m
+[31m-        public string GetSalary()[m
+[31m-        {[m
+[31m-            // Every working mounth decreases IQ[m
+[31m-            IQ--; [m
+[31m-            return pan.IsSad ? "mało" : "spoko";[m
+[31m-        }[m
+[31m-[m
+[31m-        public void ButtleCry(string boyName)[m
+[31m-        {[m
+[31m-            Console.WriteLine("Kurwa, {0}, nic nie robisz w pracy! Już dzwonię do {1}", boyName, pan.Name);[m
+[31m-        }[m
+[31m-[m
+[31m-        public void SetDriver(Creature driver)[m
+[31m-        {[m
+[31m-            pan = (PolishPan)driver;[m
+[31m-        }[m
+[31m-[m
+[31m-        public void Resign()[m
+[31m-        {[m
+[31m-            Console.WriteLine("Mam dość tego!");[m
+[31m-            pan = null;[m
+[31m-        }[m
+[31m-    }[m
+[31m-}[m
+\ No newline at end of file[m
+[1mdiff --git a/OurCreatures/OurCreatures.csproj b/OurCreatures/OurCreatures.csproj[m
+[1mindex ccb1e67..799a4ce 100644[m
+[1m--- a/OurCreatures/OurCreatures.csproj[m
+[1m+++ b/OurCreatures/OurCreatures.csproj[m
+[36m@@ -45,7 +45,7 @@[m
+   <ItemGroup>[m
+     <Compile Include="Animal.cs" />[m
+     <Compile Include="Auto.cs" />[m
+[31m-    <Compile Include="CafeGirl1.cs" />[m
+[32m+[m[32m    <Compile Include="CafeGirl.cs" />[m
+     <Compile Include="Creature.cs" />[m
+     <Compile Include="Human.cs" />[m
+     <Compile Include="IMachine.cs" />[m
+[1mdiff --git a/OurCreatures/Program.cs b/OurCreatures/Program.cs[m
+[1mindex f0c2ae4..33d499f 100644[m
+[1m--- a/OurCreatures/Program.cs[m
+[1m+++ b/OurCreatures/Program.cs[m
+[36m@@ -1,6 +1,7 @@[m
+ ﻿using System;[m
+ using System.Collections.Generic;[m
+ using System.Linq;[m
+[32m+[m[32musing System.Reflection;[m
+ using System.Text;[m
+ using System.Threading.Tasks;[m
+ [m
+[36m@@ -17,16 +18,26 @@[m [mnamespace OurCreatures[m
+         //}[m
+         static void Main(string[] args)[m
+         {[m
+[31m-            Instruction[] instructions = new Instruction[new Random().Next(2, 5)];[m
+[31m-            for (int i = 0; i < instructions.Length; i++)[m
+[32m+[m[32m            //Instruction[] instructions = new Instruction[new Random().Next(2, 5)];[m
+[32m+[m[32m            //for (int i = 0; i < instructions.Length; i++)[m
+[32m+[m[32m            //{[m
+[32m+[m[32m            //    instructions[i] = new Instruction() { Description = String.Format("instruction №{0}", i+1) };[m
+[32m+[m[32m            //}[m
+[32m+[m
+[32m+[m[32m            //Auto auto = new Auto();[m
+[32m+[m[32m            //auto.SetDriver(new Human() { Name = "Ray" });[m
+[32m+[m[32m            //auto.GetInstructions(instructions.ToList<Instruction>());[m
+[32m+[m[32m            //auto.Move();[m
+[32m+[m
+[32m+[m[32m            var type = new CafeGirl().GetType();[m
+[32m+[m[32m            Activator.CreateInstance(type).ToString();[m
+[32m+[m[32m            object somePolishGirl = Activator.CreateInstance(type);[m
+[32m+[m[32m            ICollection<MemberInfo> membersOfClass = type.GetProperties();[m
+[32m+[m[32m            foreach (MemberInfo member in membersOfClass)[m
+             {[m
+[31m-                instructions[i] = new Instruction() { Description = String.Format("instruction №{0}", i+1) };[m
+[32m+[m[32m                Console.WriteLine(member.ToString());[m
+             }[m
+[31m-[m
+[31m-            Auto auto = new Auto();[m
+[31m-            auto.SetDriver(new Human() { Name = "Ray" });[m
+[31m-            auto.GetInstructions(instructions.ToList<Instruction>());[m
+[31m-            auto.Move();[m
+[32m+[m[32m            Console.ReadKey();[m
+         }[m
+     }[m
+ }[m
+[1mdiff --git a/OurCreatures/bin/Debug/OurCreatures.exe b/OurCreatures/bin/Debug/OurCreatures.exe[m
+[1mindex c792215..03cc19d 100644[m
+Binary files a/OurCreatures/bin/Debug/OurCreatures.exe and b/OurCreatures/bin/Debug/OurCreatures.exe differ
+[1mdiff --git a/OurCreatures/bin/Debug/OurCreatures.pdb b/OurCreatures/bin/Debug/OurCreatures.pdb[m
+[1mindex feb55b3..bec79c7 100644[m
+Binary files a/OurCreatures/bin/Debug/OurCreatures.pdb and b/OurCreatures/bin/Debug/OurCreatures.pdb differ
+[1mdiff --git a/OurCreatures/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache b/OurCreatures/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache[m
+[1mindex 7b8441e..6935a96 100644[m
+Binary files a/OurCreatures/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache and b/OurCreatures/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache differ
+[1mdiff --git a/OurCreatures/obj/Debug/OurCreatures.csproj.CoreCompileInputs.cache b/OurCreatures/obj/Debug/OurCreatures.csproj.CoreCompileInputs.cache[m
+[1mindex 593e5cb..6ffdc74 100644[m
+[1m--- a/OurCreatures/obj/Debug/OurCreatures.csproj.CoreCompileInputs.cache[m
+[1m+++ b/OurCreatures/obj/Debug/OurCreatures.csproj.CoreCompileInputs.cache[m
+[36m@@ -1 +1 @@[m
+[31m-0e463b0887ca9cbe567fe67140f082833a7fba15[m
+[32m+[m[32mb3487f861b8a3773c7ed47e59ba25b868d19c3e1[m
+[1mdiff --git a/OurCreatures/obj/Debug/OurCreatures.csprojAssemblyReference.cache b/OurCreatures/obj/Debug/OurCreatures.csprojAssemblyReference.cache[m
+[1mindex f5efa94..e592601 100644[m
+Binary files a/OurCreatures/obj/Debug/OurCreatures.csprojAssemblyReference.cache and b/OurCreatures/obj/Debug/OurCreatures.csprojAssemblyReference.cache differ
+[1mdiff --git a/OurCreatures/obj/Debug/OurCreatures.exe b/OurCreatures/obj/Debug/OurCreatures.exe[m
+[1mindex c792215..03cc19d 100644[m
+Binary files a/OurCreatures/obj/Debug/OurCreatures.exe and b/OurCreatures/obj/Debug/OurCreatures.exe differ
+[1mdiff --git a/OurCreatures/obj/Debug/OurCreatures.pdb b/OurCreatures/obj/Debug/OurCreatures.pdb[m
+[1mindex feb55b3..bec79c7 100644[m
+Binary files a/OurCreatures/obj/Debug/OurCreatures.pdb and b/OurCreatures/obj/Debug/OurCreatures.pdb differ

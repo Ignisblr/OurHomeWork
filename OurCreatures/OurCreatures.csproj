@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Animal.cs" />
     <Compile Include="Auto.cs" />
-    <Compile Include="CafeGirl1.cs" />
+    <Compile Include="CafeGirl.cs" />
     <Compile Include="Creature.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="IMachine.cs" />

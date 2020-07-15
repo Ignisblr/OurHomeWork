@@ -15,6 +15,9 @@ namespace OurCreatures
         private PolishPan pan;
         public int IQ { get; set; }
 
+        public CafeGirl()
+        {; }
+
         public CafeGirl(string name)
         {
             Name = name;
