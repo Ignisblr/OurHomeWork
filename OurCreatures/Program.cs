@@ -8,6 +8,13 @@ namespace OurCreatures
 {
     class Program
     {
+        //List<Type> ourCreatures = new List<Type>();
+
+        //public List<Type> GetAllCreatures(Type creature)
+        //{
+        //    ourCreatures.Add(creature);
+        //    return ourCreatures;
+        //}
         static void Main(string[] args)
         {
             Instruction[] instructions = new Instruction[new Random().Next(2, 5)];

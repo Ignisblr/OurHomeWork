@@ -8,6 +8,7 @@ namespace OurCreatures
 {
     public class Human : Animal
     {
+        const Animal.Classification classification = Classification.Mammal;
         double Weight { get; set; }
         enum Race { European, Asian, Negro, Indian }
     }

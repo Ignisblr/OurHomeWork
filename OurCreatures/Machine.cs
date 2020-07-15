@@ -10,9 +10,9 @@ namespace OurCreatures
     {
         int MadingYear { get; set; }
 
-        string Color { get; set; }
+        public string Color { get; set; }
 
-        string Purpose { get; set; }
+        public string Purpose { get; set; }
 
         public void GetInstructions(List<Instruction> instructions)
         {
