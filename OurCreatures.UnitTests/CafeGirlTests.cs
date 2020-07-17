@@ -8,35 +8,49 @@ namespace OurCreatures.UnitTests
     public class CafeGirlTests
     {
         [TestMethod]
-        public void GetSalary_ReturnsTrue()
+        public void GetSalary_PanIsSad_ReturnsFalse()
         {
             //Arrange
-            var polishPan = new PolishPan();
+            PolishPan polishPan = new PolishPan();
             polishPan.SetGoodMood("had sex two hours ago");
 
-            var cafeGirl = new CafeGirl("Polina", polishPan);
+            CafeGirl cafeGirl = new CafeGirl("Polina", polishPan);
 
             //Act
-            var result = cafeGirl.GetSalary();
+            string result = cafeGirl.GetSalary();
 
             //Assert
-            Assert.AreEqual(result, "spoko");
+            Assert.AreEqual("spoko", result);
         }
 
         [TestMethod]
-        public void GetSalary_ReturnsFalse()
+        public void GetSalary_PanIsSad_ReturnsTrue()
         {
             //Arrange
-            var polishPan = new PolishPan();
+            PolishPan polishPan = new PolishPan();
             polishPan.SetBadMood("hadn`t sex by whole mounth");
 
-            var cafeGirl = new CafeGirl("Janina", polishPan);
+            CafeGirl cafeGirl = new CafeGirl("Janina", polishPan);
 
             //Act
-            var result = cafeGirl.GetSalary();
+            string result = cafeGirl.GetSalary();
 
             //Assert
-            Assert.AreEqual(result, "mało");
+            Assert.AreEqual("mało", result);
+        }
+
+        [TestMethod]
+        public void GetDriver_ReturnsPolishPan()
+        {
+            //Arrange
+            CafeGirl cafeGirl = new CafeGirl("Lisa");
+
+            //Act
+            cafeGirl.SetDriver(new PolishPan() { Name = "Jacek" });
+            var result = cafeGirl.GetDriver();
+
+            //Assert
+            Assert.AreEqual(new PolishPan().GetType(), result.GetType());
         }
     }
 }

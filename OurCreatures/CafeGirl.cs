@@ -24,7 +24,7 @@ namespace OurCreatures
             Name = name;
             
             Random rand = new Random();
-            IQ = rand.Next(80, 150);
+            IQ = rand.Next(80, 110);
             if (IQ > 120)
                 Resign();
         }
@@ -35,9 +35,7 @@ namespace OurCreatures
             this.pan_ = pan;
 
             Random rand = new Random();
-            IQ = rand.Next(80, 150);
-            if (IQ > 120)
-                Resign();
+            IQ = rand.Next(80, 150);            
         }
 
         public string GetSalary()
@@ -54,7 +52,7 @@ namespace OurCreatures
 
         public void SetDriver(Creature driver)
         {
-            pan_ = (PolishPan)driver;
+            this.driver_ = driver;
         }
 
         public void Resign()

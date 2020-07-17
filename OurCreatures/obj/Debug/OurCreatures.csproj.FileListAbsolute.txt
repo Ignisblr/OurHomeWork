@@ -4,3 +4,4 @@ C:\Users\Ignis\source\repos\OurCreatures\OurCreatures\bin\Debug\OurCreatures.pdb
 C:\Users\Ignis\source\repos\OurCreatures\OurCreatures\obj\Debug\OurCreatures.csproj.CoreCompileInputs.cache
 C:\Users\Ignis\source\repos\OurCreatures\OurCreatures\obj\Debug\OurCreatures.exe
 C:\Users\Ignis\source\repos\OurCreatures\OurCreatures\obj\Debug\OurCreatures.pdb
+c:\Users\Ignis\source\repos\OurCreatures\OurCreatures\obj\Debug\OurCreatures.csprojAssemblyReference.cache

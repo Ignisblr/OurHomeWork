@@ -8,7 +8,7 @@ namespace OurCreatures
 {
     public class Creature: IMoving
     {
-        Creature driver_ = null;
+        protected Creature driver_ = null;
         bool manipulated_ = false;
         double movingSpeed_ = 0;
         string movingType = null;
@@ -18,7 +18,12 @@ namespace OurCreatures
             return driver_;
         }
 
-        public bool Manipulated { get { return manipulated_; } }
+        public bool Manipulated
+        {
+            get { return manipulated_; }
+            protected set { manipulated_ = value; }
+
+        }
 
         public string Name { get; set; }
 
