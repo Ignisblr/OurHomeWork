@@ -6,8 +6,21 @@ using System.Threading.Tasks;
 
 namespace OurCreatures
 {
-    class PolishPan : Creature
+    public class PolishPan : Creature
     {
-        public bool IsSad { get; }
+        bool moodState_;
+        public bool IsSad { get { return !moodState_; } }
+
+        public void SetGoodMood(string reason)
+        {
+            Console.WriteLine("Today our pan is happy because of {0}", 0);
+            moodState_ = true;
+        }
+
+        public void SetBadMood(string reason)
+        {
+            Console.WriteLine("Today our pan is angry with {0}", 0);
+            moodState_ = false;
+        }
     }
 }
