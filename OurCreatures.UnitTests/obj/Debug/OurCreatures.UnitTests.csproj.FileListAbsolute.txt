@@ -1,0 +1,17 @@
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\bin\Debug\OurCreatures.UnitTests.dll
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\bin\Debug\OurCreatures.UnitTests.pdb
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\bin\Debug\OurCreatures.exe
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\bin\Debug\OurCreatures.pdb
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\bin\Debug\OurCreatures.exe.config
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\obj\Debug\OurCreatures.UnitTests.csprojAssemblyReference.cache
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\obj\Debug\OurCreatures.UnitTests.csproj.CoreCompileInputs.cache
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\obj\Debug\OurCreatures.UnitTests.csproj.CopyComplete
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\obj\Debug\OurCreatures.UnitTests.dll
+C:\Users\Ignis\source\repos\OurCreatures\OurCreatures.UnitTests\obj\Debug\OurCreatures.UnitTests.pdb
