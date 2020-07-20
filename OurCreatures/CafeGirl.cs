@@ -52,7 +52,7 @@ namespace OurCreatures
 
         public void SetDriver(Creature driver)
         {
-            this.driver_ = driver;
+            driver_ = driver;
         }
 
         public void Resign()

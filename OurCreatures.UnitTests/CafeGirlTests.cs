@@ -8,7 +8,7 @@ namespace OurCreatures.UnitTests
     public class CafeGirlTests
     {
         [TestMethod]
-        public void GetSalary_PanIsSad_ReturnsFalse()
+        public void GetSalary_PanIsSad_ReturnsTrue()
         {
             //Arrange
             PolishPan polishPan = new PolishPan();
@@ -24,7 +24,7 @@ namespace OurCreatures.UnitTests
         }
 
         [TestMethod]
-        public void GetSalary_PanIsSad_ReturnsTrue()
+        public void GetSalary_PanIsSad_ReturnsFalse()
         {
             //Arrange
             PolishPan polishPan = new PolishPan();
