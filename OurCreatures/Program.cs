@@ -38,7 +38,7 @@ namespace OurCreatures
             //    Console.WriteLine(member.ToString());
             //}
 
-            Type type = 
+            //Type type = 
 
 
             Console.ReadKey();

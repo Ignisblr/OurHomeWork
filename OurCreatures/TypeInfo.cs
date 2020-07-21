@@ -19,15 +19,15 @@ namespace OurCreatures
             this.type_ = type;
         }
 
-        public IDictionary<PropertyInfo, string> GetPublicProperties()
-        {
-            IList<PropertyInfo> publicProperties = null;
-            if (this.type_ != null)
-            {
-               publicProperties = type_.GetProperties(BindingFlags.Public).ToList();
-            }
-            return publicProperties;
-        }
+        //public IDictionary<PropertyInfo, string> GetPublicProperties()
+        //{
+        //    IList<PropertyInfo> publicProperties = null;
+        //    if (this.type_ != null)
+        //    {
+        //       publicProperties = type_.GetProperties(BindingFlags.Public).ToList();
+        //    }
+        //    return publicProperties;
+        //}
 
     }
 }
