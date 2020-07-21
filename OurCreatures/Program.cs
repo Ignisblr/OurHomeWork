@@ -29,14 +29,17 @@ namespace OurCreatures
             //auto.GetInstructions(instructions.ToList<Instruction>());
             //auto.Move();
 
-            var type = new CafeGirl().GetType();
-            Activator.CreateInstance(type).ToString();
-            object somePolishGirl = Activator.CreateInstance(type);
-            ICollection<MemberInfo> membersOfClass = type.GetProperties();
-            foreach (MemberInfo member in membersOfClass)
-            {
-                Console.WriteLine(member.ToString());
-            }
+            //var type = new CafeGirl().GetType();
+            //Activator.CreateInstance(type).ToString();
+            //object somePolishGirl = Activator.CreateInstance(type);
+            //ICollection<MemberInfo> membersOfClass = type.GetProperties();
+            //foreach (MemberInfo member in membersOfClass)
+            //{
+            //    Console.WriteLine(member.ToString());
+            //}
+
+            Type type = 
+
 
             Console.ReadKey();
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using OurCreatures;
 
 namespace OurCreatures.UnitTests
@@ -52,5 +53,6 @@ namespace OurCreatures.UnitTests
             //Assert
             Assert.AreEqual(new PolishPan().GetType(), result.GetType());
         }
+
     }
 }
